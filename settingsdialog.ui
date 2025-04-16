@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+  <class>SettingsDialog</class>
+  <widget class="QDialog" name="SettingsDialog">
+    <property name="windowTitle">
+      <string>Connection Settings</string>
+    </property>
+    <layout class="QVBoxLayout">
+      <item>
+        <widget class="QGroupBox" name="groupBox">
+          <property name="title">
+            <string>Modbus TCP Settings</string>
+          </property>
+          <layout class="QVBoxLayout">
+            <item>
+              <widget class="QLabel" name="label">
+                <property name="text">
+                  <string>Server IP Address:</string>
+                </property>
+              </widget>
+            </item>
+            <item>
+              <widget class="QLineEdit" name="lineEditIP"/>
+            </item>
+          </layout>
+        </widget>
+      </item>
+      <item>
+        <layout class="QHBoxLayout">
+          <item>
+            <widget class="QPushButton" name="btnSave">
+              <property name="text">
+                <string>Save</string>
+              </property>
+            </widget>
+          </item>
+          <item>
+            <widget class="QPushButton" name="btnCancel">
+              <property name="text">
+                <string>Cancel</string>
+              </property>
+            </widget>
+          </item>
+        </layout>
+      </item>
+    </layout>
+  </widget>
+</ui>

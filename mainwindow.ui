@@ -1,0 +1,329 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+  <class>MainWindow</class>
+  <widget class="QMainWindow" name="MainWindow">
+    <property name="geometry">
+      <rect>
+        <x>0</x>
+        <y>0</y>
+        <width>800</width>
+        <height>600</height>
+      </rect>
+    </property>
+    <property name="windowTitle">
+      <string>Industrial Control System</string>
+    </property>
+    <widget class="QWidget" name="centralWidget">
+      <layout class="QVBoxLayout" name="mainLayout">
+        <item>
+          <widget class="QGroupBox" name="groupConnection">
+            <property name="title">
+              <string>Connection Status</string>
+            </property>
+            <layout class="QHBoxLayout" name="horizontalLayout">
+              <item>
+                <widget class="QLabel" name="lblStatus">
+                  <property name="text">
+                    <string>Status: Disconnected</string>
+                  </property>
+                  <property name="styleSheet">
+                    <string notr="true">color: red;</string>
+                  </property>
+                </widget>
+              </item>
+              <item>
+                <widget class="QPushButton" name="btnConnect">
+                  <property name="text">
+                    <string>Connect</string>
+                  </property>
+                </widget>
+              </item>
+              <item>
+                <widget class="QPushButton" name="btnSettings">
+                  <property name="text">
+                    <string>Settings</string>
+                  </property>
+                </widget>
+              </item>
+            </layout>
+          </widget>
+        </item>
+
+        <item>
+          <widget class="QGroupBox" name="groupSystem">
+            <property name="title">
+              <string>System Controls</string>
+            </property>
+            <layout class="QHBoxLayout" name="horizontalLayout_2">
+              <item>
+                <widget class="QPushButton" name="btnStartStop">
+                  <property name="checkable">
+                    <bool>true</bool>
+                  </property>
+                  <property name="text">
+                    <string>Start System</string>
+                  </property>
+                </widget>
+              </item>
+              <item>
+                <widget class="QPushButton" name="btnReset">
+                  <property name="text">
+                    <string>Reset System</string>
+                  </property>
+                </widget>
+              </item>
+              <item>
+                <widget class="QPushButton" name="btnZeroWeight">
+                  <property name="text">
+                    <string>Zero Weight</string>
+                  </property>
+                </widget>
+              </item>
+              <item>
+                <widget class="QPushButton" name="btnTareWeight">
+                  <property name="text">
+                    <string>Tare Weight</string>
+                  </property>
+                </widget>
+              </item>
+              <item>
+                <widget class="QPushButton" name="btnManualMode">
+                  <property name="checkable">
+                    <bool>true</bool>
+                  </property>
+                  <property name="text">
+                    <string>Manual Mode</string>
+                  </property>
+                </widget>
+              </item>
+            </layout>
+          </widget>
+        </item>
+
+        <item>
+          <widget class="QGroupBox" name="groupManual">
+            <property name="title">
+              <string>Manual Controls</string>
+            </property>
+            <property name="enabled">
+              <bool>false</bool>
+            </property>
+            <layout class="QGridLayout" name="gridLayout">
+              <item row="0" column="0">
+                <widget class="QPushButton" name="btnClimbUp">
+                  <property name="text">
+                    <string>Climb Up</string>
+                  </property>
+                  <property name="toolTip">
+                    <string>Move shelf up</string>
+                  </property>
+                </widget>
+              </item>
+              <item row="0" column="1">
+                <widget class="QPushButton" name="btnClimbDown">
+                  <property name="text">
+                    <string>Climb Down</string>
+                  </property>
+                  <property name="toolTip">
+                    <string>Move shelf down</string>
+                  </property>
+                </widget>
+              </item>
+              <item row="1" column="0">
+                <widget class="QPushButton" name="btnShiftIn">
+                  <property name="text">
+                    <string>Shift In</string>
+                  </property>
+                  <property name="toolTip">
+                    <string>Retract carriage</string>
+                  </property>
+                </widget>
+              </item>
+              <item row="1" column="1">
+                <widget class="QPushButton" name="btnShiftOut">
+                  <property name="text">
+                    <string>Shift Out</string>
+                  </property>
+                  <property name="toolTip">
+                    <string>Extend carriage</string>
+                  </property>
+                </widget>
+              </item>
+            </layout>
+          </widget>
+        </item>
+
+        <item>
+          <widget class="QGroupBox" name="groupAuto">
+            <property name="title">
+              <string>Automatic Control</string>
+            </property>
+            <layout class="QGridLayout" name="gridLayout_2">
+              <item row="0" column="0">
+                <widget class="QLabel" name="lblCurrentRack">
+                  <property name="text">
+                    <string>Current Rack:</string>
+                  </property>
+                </widget>
+              </item>
+              <item row="0" column="1">
+                <widget class="QLabel" name="lblCurrentRackValue">
+                  <property name="text">
+                    <string>0</string>
+                  </property>
+                  <property name="frameShape">
+                    <enum>QFrame::Panel</enum>
+                  </property>
+                </widget>
+              </item>
+              <item row="1" column="0">
+                <widget class="QLabel" name="lblSelectRack">
+                  <property name="text">
+                    <string>Select Rack:</string>
+                  </property>
+                </widget>
+              </item>
+              <item row="1" column="1">
+                <widget class="QSpinBox" name="spinRackSelect">
+                  <property name="minimum">
+                    <number>-1</number>
+                  </property>
+                  <property name="maximum">
+                    <number>20</number>
+                  </property>
+                </widget>
+              </item>
+              <item row="2" column="0">
+                <widget class="QLabel" name="lblWeight">
+                  <property name="text">
+                    <string>Current Weight:</string>
+                  </property>
+                </widget>
+              </item>
+              <item row="2" column="1">
+                <widget class="QLabel" name="lblWeightValue">
+                  <property name="text">
+                    <string>0.00 kg</string>
+                  </property>
+                  <property name="frameShape">
+                    <enum>QFrame::Panel</enum>
+                  </property>
+                </widget>
+              </item>
+              <item row="3" column="0" colspan="2">
+                <layout class="QHBoxLayout">
+                  <item>
+                    <widget class="QPushButton" name="btnStartAuto">
+                      <property name="text">
+                        <string>Start Auto Operation</string>
+                      </property>
+                    </widget>
+                  </item>
+                  <item>
+                    <widget class="QPushButton" name="btnStopAuto">
+                      <property name="text">
+                        <string>Stop Auto Operation</string>
+                      </property>
+                    </widget>
+                  </item>
+                </layout>
+              </item>
+            </layout>
+          </widget>
+        </item>
+
+        <item>
+          <widget class="QGroupBox" name="groupErrors">
+            <property name="title">
+              <string>System Errors</string>
+            </property>
+            <layout class="QGridLayout" name="gridLayout_3">
+              <item row="0" column="0">
+                <widget class="QLabel" name="lblWeightError">
+                  <property name="text">
+                    <string>Weight Error</string>
+                  </property>
+                </widget>
+              </item>
+              <item row="0" column="1">
+                <widget class="QLabel" name="lblWeightErrorIndicator">
+                  <property name="styleSheet">
+                    <string notr="true">background-color: gray; border-radius: 10px;</string>
+                  </property>
+                  <property name="minimumSize">
+                    <size>
+                      <width>20</width>
+                      <height>20</height>
+                    </size>
+                  </property>
+                </widget>
+              </item>
+              <item row="1" column="0">
+                <widget class="QLabel" name="lblHeightError">
+                  <property name="text">
+                    <string>Height Error</string>
+                  </property>
+                </widget>
+              </item>
+              <item row="1" column="1">
+                <widget class="QLabel" name="lblHeightErrorIndicator">
+                  <property name="styleSheet">
+                    <string notr="true">background-color: gray; border-radius: 10px;</string>
+                  </property>
+                  <property name="minimumSize">
+                    <size>
+                      <width>20</width>
+                      <height>20</height>
+                    </size>
+                  </property>
+                </widget>
+              </item>
+              <item row="2" column="0">
+                <widget class="QLabel" name="lblEndstopError">
+                  <property name="text">
+                    <string>Endstop Error</string>
+                  </property>
+                </widget>
+              </item>
+              <item row="2" column="1">
+                <widget class="QLabel" name="lblEndstopErrorIndicator">
+                  <property name="styleSheet">
+                    <string notr="true">background-color: gray; border-radius: 10px;</string>
+                  </property>
+                  <property name="minimumSize">
+                    <size>
+                      <width>20</width>
+                      <height>20</height>
+                    </size>
+                  </property>
+                </widget>
+              </item>
+              <item row="3" column="0">
+                <widget class="QLabel" name="lblVFDError">
+                  <property name="text">
+                    <string>VFD Error</string>
+                  </property>
+                </widget>
+              </item>
+              <item row="3" column="1">
+                <widget class="QLabel" name="lblVFDErrorIndicator">
+                  <property name="styleSheet">
+                    <string notr="true">background-color: gray; border-radius: 10px;</string>
+                  </property>
+                  <property name="minimumSize">
+                    <size>
+                      <width>20</width>
+                      <height>20</height>
+                    </size>
+                  </property>
+                </widget>
+              </item>
+            </layout>
+          </widget>
+        </item>
+      </layout>
+    </widget>
+  </widget>
+  <resources/>
+  <connections/>
+</ui>
